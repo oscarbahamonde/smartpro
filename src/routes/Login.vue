@@ -102,7 +102,9 @@ body {
 }
 label {
   color: #ccc;
-  @apply flex flex-col items-center text-lg;
+  @apply flex; 
+  @apply items-center;
+  @apply text-lg;
   display: flex;
   font-weight: bold;
   cursor: pointer;
