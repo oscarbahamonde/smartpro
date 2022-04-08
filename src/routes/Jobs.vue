@@ -3,10 +3,10 @@ https://eugenkiss.github.io/7guis/tasks/#cells
 -->
 
 <script setup>
-import Cell from '../components/Cell.vue'
-import { cells } from './store.js'
+import Cell from "../components/Cell.vue";
+import { cells } from "./store.js";
 
-const cols = cells.map((_, i) => String.fromCharCode(65 + i))
+const cols = cells.map((_, i) => String.fromCharCode(65 + i));
 </script>
 
 <template>

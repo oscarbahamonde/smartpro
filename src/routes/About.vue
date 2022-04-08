@@ -1,6 +1,5 @@
-
 <script setup>
-import RadioChart from '../lib/RadioChart.vue'
+import RadioChart from "../lib/RadioChart.vue";
 </script>
 <template>
   <RadioChart></RadioChart>

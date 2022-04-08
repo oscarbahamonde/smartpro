@@ -3,7 +3,11 @@
     <input type="checkbox" id="chk" aria-hidden="true" />
 
     <div class="signup items-center">
-      <form target="http//localhost:8000/api/usersd" method="post" type="submit">
+      <form
+        target="http//localhost:8000/api/usersd"
+        method="post"
+        type="submit"
+      >
         <label for="chk" aria-hidden="true">Sign up</label>
         <input type="text" name="txt" placeholder="User name" required="" />
         <input type="email" name="email" placeholder="Email" required="" />
@@ -19,7 +23,13 @@
     <div class="login items-center">
       <form>
         <label for="chk" aria-hidden="true">Login</label>
-        <input type="email" name="email" placeholder="Email" required v-model="email" />
+        <input
+          type="email"
+          name="email"
+          placeholder="Email"
+          required
+          v-model="email"
+        />
         <input
           type="password"
           name="pswd"
@@ -43,7 +53,7 @@ import store from "../js/store";
 let email = "";
 let password = "";
 const ingoogle = async () => {
-  const usr = await authenticator.sign_in_with_google()
+  const usr = await authenticator.sign_in_with_google();
 };
 
 const ingithub = async () => {
@@ -54,7 +64,7 @@ const ingithub = async () => {
 
 const inuser = async () => {
   const usr = await authenticator.create_user(email, password).then((res) => {
-	store.commit("setUser", res.user);
+    store.commit("setUser", res.user);
   });
   try {
     const usr = await authenticator.sign_in(email, password);
@@ -76,11 +86,10 @@ body {
 .main {
   overflow: hidden;
   box-shadow: 5px 20px 50px #000;
- 
 }
- .main:hover{
+.main:hover {
   box-shadow: 5px 20px 50px #fff;
-  }
+}
 #chk {
   display: none;
 }

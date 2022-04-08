@@ -1,12 +1,9 @@
 module.exports = {
   mode: "jit",
-  content: [
-    "./index.html",
-    "./src/**/*.{vue,js,ts,jsx,tsx}",
-  ],
+  content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
 
   plugins: [require("daisyui")],
-  daisyui:{
+  daisyui: {
     themes: ["dracula"],
-  }
-}
+  },
+};

@@ -1,41 +1,38 @@
-@import url('https://fonts.googleapis.com/css2?family=Aleo&family=Inconsolata:wght@600&family=Mukta&family=Niconne&display=swap');
-@import url('@mdi/font/css/materialdesignicons.css');
-@import url('tailwindcss/tailwind.css');
-@import url('daisyui/dist/full.css');
-@import url('https://unpkg.com/dropzone@5/dist/min/dropzone.min.css');
+@import url("https://fonts.googleapis.com/css2?family=Aleo&family=Inconsolata:wght@600&family=Mukta&family=Niconne&display=swap");
+@import url("@mdi/font/css/materialdesignicons.css");
+@import url("tailwindcss/tailwind.css");
+@import url("daisyui/dist/full.css");
+@import url("https://unpkg.com/dropzone@5/dist/min/dropzone.min.css");
 /*Generic Tag Styles*/
 
-i{
-    @apply mdi;
+i {
+  @apply mdi;
 }
 button {
-    @apply btn;
+  @apply btn;
 }
 
 .scope {
-    @apply flex flex-col items-center m-8;
+  @apply flex flex-col items-center m-8;
 }
 
 html {
-    @apply bg-gradient-to-r from-blue-500 via-blue-300 to-blue-100;
+  @apply bg-gradient-to-r from-blue-500 via-blue-300 to-blue-100;
 }
-.nav-bar{
-    @apply flex flex-row justify-start w-auto items-center bg-black shadow-2xl fixed text-white z-10 rounded-lg m-2;
-    
-    .nav-link{
-        @apply m-4;
-        i{
-            @apply mx-2;
-        }
-    
+.nav-bar {
+  @apply flex flex-row justify-start w-auto items-center bg-black shadow-2xl fixed text-white z-10 rounded-lg m-2;
+
+  .nav-link {
+    @apply m-4;
+    i {
+      @apply mx-2;
     }
-
+  }
 }
-
 
 .social-icon {
-    @apply btn btn-circle btn-success btn-outline ;
-    &:hover {
-        @apply scale-125 transition-all duration-200 ease-in-out;
-    }
+  @apply btn btn-circle btn-success btn-outline;
+  &:hover {
+    @apply scale-125 transition-all duration-200 ease-in-out;
+  }
 }

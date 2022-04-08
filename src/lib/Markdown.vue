@@ -1,15 +1,15 @@
 <script setup>
-import { marked } from 'marked'
-import { debounce } from 'lodash-es'
-import { ref, computed } from 'vue'
+import { marked } from "marked";
+import { debounce } from "lodash-es";
+import { ref, computed } from "vue";
 
-const input = ref('# hello')
+const input = ref("# hello");
 
-const output = computed(() => marked(input.value))
+const output = computed(() => marked(input.value));
 
 const update = debounce((e) => {
-  input.value = e.target.value
-}, 100)
+  input.value = e.target.value;
+}, 100);
 </script>
 
 <template>
@@ -45,7 +45,7 @@ body {
   outline: none;
   background-color: #f6f6f6;
   font-size: 14px;
-  font-family: 'Monaco', courier, monospace;
+  font-family: "Monaco", courier, monospace;
   padding: 20px;
 }
 

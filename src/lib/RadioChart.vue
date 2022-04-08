@@ -3,34 +3,34 @@ Say Hello World with Vue!
 -->
 
 <script setup>
-import PolyGraph from './PolyGraph.vue'
-import { ref, reactive } from 'vue'
+import PolyGraph from "./PolyGraph.vue";
+import { ref, reactive } from "vue";
 
-const newLabel = ref('')
+const newLabel = ref("");
 const stats = reactive([
-  { label: 'A', value: 100 },
-  { label: 'B', value: 100 },
-  { label: 'C', value: 100 },
-  { label: 'D', value: 100 },
-  { label: 'E', value: 100 },
-  { label: 'F', value: 100 }
-])
+  { label: "A", value: 100 },
+  { label: "B", value: 100 },
+  { label: "C", value: 100 },
+  { label: "D", value: 100 },
+  { label: "E", value: 100 },
+  { label: "F", value: 100 },
+]);
 
 function add(e) {
-  e.preventDefault()
-  if (!newLabel.value) return
+  e.preventDefault();
+  if (!newLabel.value) return;
   stats.push({
     label: newLabel.value,
-    value: 100
-  })
-  newLabel.value = ''
+    value: 100,
+  });
+  newLabel.value = "";
 }
 
 function remove(stat) {
   if (stats.length > 3) {
-    stats.splice(stats.indexOf(stat), 1)
+    stats.splice(stats.indexOf(stat), 1);
   } else {
-    alert("Can't delete more!")
+    alert("Can't delete more!");
   }
 }
 </script>
@@ -42,14 +42,14 @@ function remove(stat) {
 
   <!-- controls -->
   <div v-for="stat in stats">
-    <label>{{stat.label}}</label>
-    <input type="range" v-model="stat.value" min="0" max="100">
-    <span>{{stat.value}}</span>
+    <label>{{ stat.label }}</label>
+    <input type="range" v-model="stat.value" min="0" max="100" />
+    <span>{{ stat.value }}</span>
     <button @click="remove(stat)" class="remove">X</button>
   </div>
 
   <form id="add">
-    <input name="newlabel" v-model="newLabel">
+    <input name="newlabel" v-model="newLabel" />
     <button @click="add">Add a Stat</button>
   </form>
 

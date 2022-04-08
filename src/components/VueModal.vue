@@ -3,10 +3,10 @@ Modal component with customizable slots and CSS transitions.
 -->
 
 <script setup>
-import Modal from './Modal.vue'
-import { ref } from 'vue'
+import Modal from "./Modal.vue";
+import { ref } from "vue";
 
-const showModal = ref(false)
+const showModal = ref(false);
 </script>
 
 <template>
